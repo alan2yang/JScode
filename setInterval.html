@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>显示时间</title>
+</head>
+<body>
+  <p id="time">01:02:03</p>
+  
+  <script>
+    var time=document.getElementById("time");
+    var a=time.innerHTML;
+      var j=0;
+      a=a.split(":");
+      for(var i=0;i<a.length;i++){
+        a[i]=parseInt(a[i]);
+     } 
+     
+    function newtime(){
+    var today=new Date();
+    var hour=today.getHours()+a[0];
+    var minute=today.getMinutes()+a[1];
+    var second=today.getSeconds()+a[2];
+     
+    time.innerHTML=hour+":"+minute+":"+second;
+    }
+    
+    setInterval(newtime,1000);
+  </script>
+</body>
+</html>
