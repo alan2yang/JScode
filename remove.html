@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移出数组元素</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//方法1
+		function remove(arr, item) {
+			var a=[];
+			for(var i=0,j=0;i<arr.length;i++){
+				if(arr[i]===item){
+					continue;
+				}else{
+					a[j]=arr[i];
+					j++;
+				}
+			}
+			return a;
+		}
+
+		//方法2
+		function remove(arr, item) {
+			return arr.filter(function(value){
+				return value!==item;
+			});
+		}
+
+		//ff3
+		function remove(arr.item){
+			var a=[];
+			for(var i=0,j=0;i<arr.length;i++){
+				if(arr[i]!==item){
+					a.push(arr[i]);
+				}
+			}
+			return a;
+		}
+	</script>
+</body>
+</html>

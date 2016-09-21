@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>查找数组元素位置</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//输出描述：如果数组中存在 item，则返回元素在数组中的位置，否则返回 -1
+		function indexOf(arr,item){
+			if(Arry.prototype.indexOf){
+				return arr.indexOf(item);
+			}else{
+				for (var i = 0; i < arr.length; i++) {
+					if(arr[i]===item){
+						return i;
+					}
+				}
+			}
+			return -1;
+		}
+	</script>
+</body>
+</html>
