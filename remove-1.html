@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移除数组元素</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		//移除数组中与目标相同的元素，要求是直接在给定的数组arr上进行操作
+		function removeWithoutCopy(arr, item) {
+			for(var i=0;i<arr.length;i++){
+				if(arr[i]==item){
+					arr.splice(i,1);
+					i--;
+				}
+			}
+			return arr;
+		}
+	</script>
+</body>
+</html>
